@@ -1,0 +1,5 @@
+API : coingecko.com/en/api
+
+Carousel : React Alice Carousel
+
+UI : Material UI

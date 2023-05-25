@@ -1,38 +1,258 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: gold;
+}
+
+.App{
+  background-color: #14161a;
+  color: white;
+  min-height: 100vh;
+}
+
+.title{
+  flex: 1;
+  color: gold;
+  font-family: montserrat !important;
+  font-weight: bold !important;
+  cursor: pointer;
+}
+
+.banner{
+  background-image: url('../public/banner2.jpg');
+}
+.bannerContent{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+.tagline{
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel{
+  height: 50%;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carouselItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row{
+  background-color: #16171a;
+  cursor: pointer;
+  font-family: "Montserrat",;
+}
+
+.row:hover{
+  background-color: #131111;
+}
+
+.pagination .MuiPaginationItem-root {
+  color: gold;
+}
+
+
+
+.coin-container {
+  display: flex;
+}
+
+.sidebar{
+ width: 30%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 25px;
+ border-right: 2px solid grey;
+}
+
+.heading{
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+}
+
+.desc{
+  width: 100%;
+  font-family: Montserrat;
+  padding: 25px;
+  padding-bottom: 15px;
+  padding-top: 0;
+  text-align: justify;
+}
+.marketData {
+  align-self: start;
+  padding: 20px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.info-container {
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 25px;
+  padding: 40px;
+}
+
+.selectbutton {
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Montserrat";
+  cursor: pointer;
+  background-color:  black;
+  color: white;
+  font-weight: 700;
+  width: 22%;
+}
+
+.selectbutton:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* login modal */
+.paper {
+  width: 400px;
+  color: white;
+  border-radius: 10px;
+}
+
+.google{
+  padding: 24px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.google span{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* user sidebar */
+.usersidebar-container{
+  width: 350px;
+  padding: 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+}
+.profile{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 92%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.picture{
+width: 200px !important;
+height: 200px !important;
+cursor: pointer;
+background-color: #EEBC1D !important;
+object-fit: contain;
+
+}
+.logout{
+  height: 8%;
+  width: 100%;
+  background-color: #EEBC1D !important;
+  margin-top: 20px !important;
+}
+
+.watchlist{
+  flex: 1;
+  width: 100%;
+  background-color: grey;
+  border-radius: 10px;
+  padding: 15px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow-y: scroll;
+}
+
+.coin{
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EEBC1D;
+  box-shadow: 0 0 3px black;
+}
+
+
+
+
+
+@media (max-width: 960px) {
+  .coin-container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar{
+    width: 100%;
+  }
+  .marketData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-container {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .marketData {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .marketData {
+    align-items: start;
   }
 }
